@@ -1,0 +1,26 @@
+
+<div class="details">
+<button (click)="openuserDialog()" class="btn btn-primary">Add product</button>
+<button (click)="sortProduct('desc')" class="btn btn-primary">Sort By Desc</button>
+<button (click)="sortProduct('asc')" class="btn btn-primary">Sort By Asc</button>
+</div>
+
+
+
+<div class="container">
+<div class="row">
+<div *ngFor='let product of products' class="col-md-4">
+<div class="product py-1">     
+<a [routerLink] = "['/productdetails',product.id]"  class="a-product">       
+<img [src]="product.image" class="img-fluid">
+<h5 class="p-3">{{product.title|seemore:50}}</h5>
+<p class="t-desc">{{product.description|seemore:100}}</p>
+<span>..see more</span>
+<p class="t-price"> <strong>Price:</strong> {{product.price|currency}} </p>
+</a>
+<button (click)="deleteProduct(product.id)" class="btn btn-info">Delete </button>
+<button (click)="openuserDialog(product)" class="btn btn-success">Edit </button>
+</div>
+</div>
+</div>
+</div>

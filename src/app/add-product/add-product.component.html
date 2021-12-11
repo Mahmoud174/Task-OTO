@@ -1,0 +1,75 @@
+<h1 mat-dialog-title> Add Product Info</h1>
+<div mat-dialog-content>
+<form class="row" [formGroup]="request">
+<div class="col-md-6 mb-3">
+<label class="form-label">title*</label>
+<input
+placeholder=title
+formControlName="title"
+type="text"
+class="form-control"
+/>
+<div *ngIf="request.controls.title.touched&&request.controls.title.errors!=null" 
+class="alert alert-danger mt-1">Please provide a title.</div>
+</div>
+
+<div class="col-md-6 mb-3">
+<label class="form-label">price*</label>
+<input
+placeholder=price
+formControlName="price"
+type="number"
+class="form-control"
+/>
+<div *ngIf="request.controls.price.touched&&request.controls.price.errors!=null" 
+class="alert alert-danger mt-1">Please provide a price.</div>
+</div> 
+
+<div class="col-md-6 mb-3">
+<label class="form-label">description*</label>
+<input
+placeholder=description
+formControlName="description"
+type="text"
+class="form-control"
+/>
+<div *ngIf="request.controls.description.touched&&request.controls.description.errors!=null" 
+class="alert alert-danger mt-1">Please provide a description.</div>
+</div> 
+
+<div class="col-md-6 mb-3">
+<label class="form-label">image*</label>
+<input
+placeholder=image
+formControlName="image"
+type="text"
+class="form-control"
+/>
+<div *ngIf="request.controls.image.touched&&request.controls.image.errors!=null" 
+class="alert alert-danger mt-1 al-err">Please provide a image.</div>
+</div> 
+
+
+
+<div class="col-md-6 mb-3">
+<label class="form-label">category*</label>
+<input
+placeholder=category
+formControlName="category"
+type="text"
+class="form-control"
+/>
+<div *ngIf="request.controls.category.touched&&request.controls.category.errors!=null" 
+class="alert alert-danger mt-1">Please provide a category.</div>
+
+</div> 
+
+
+              
+              
+
+</form>
+</div>
+<div mat-dialog-action>
+    <button [disabled]="request.invalid"  [mat-dialog-close] (click)=submitProduct() class="btn btn-primary">{{product?.id ? "Edit": "Save"}}</button>
+</div>

@@ -1,0 +1,63 @@
+.product
+{
+    padding: 20px;
+    margin: 20px;
+    cursor:pointer ;
+    border: 1px solid gray;
+    overflow: hidden;
+}
+.details
+{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.product h5
+{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100ch;
+}
+button
+{
+    margin: 10px;
+}
+.a-product
+{
+    text-decoration: none;
+    color: black;
+}
+.t-desc
+{
+
+    overflow: hidden;
+    max-width: 100ch;
+    display: inline;
+}
+.product span 
+{
+    margin-left: 5px;
+    color: beige;
+    background-color: cadetblue;
+    
+
+}
+.product img 
+{
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.product img:hover 
+{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+.t-price 
+{
+    margin-top: 5px;
+}

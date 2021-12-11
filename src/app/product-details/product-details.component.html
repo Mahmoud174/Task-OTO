@@ -1,0 +1,12 @@
+<div class="container">
+<div *ngIf='isLoad == true' class="row">
+<div class="col-md-6 product-main">
+<img class="w-100"  [src]="productDetails.image"> 
+<h3>{{productDetails.title}}</h3>
+<p>{{productDetails.description}}</p>
+<p class="t-price"> <strong>Price:</strong> {{productDetails.price|currency}} </p>
+<p class="t-price"> <strong>Category:</strong> {{productDetails.category}} </p>
+
+</div>
+</div>
+</div>
